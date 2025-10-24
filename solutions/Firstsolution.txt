@@ -1,1 +1,86 @@
+Hint: I used artificial intelligence to remove all errors and present a clearer version of the original text.
+(AI used only for text files and graph generation. No AI was used in the program - purely my work.)
 
+Introduction :
+
+Imagine a simple cup of water being shared among a group of guests. At first glance, it seems straightforward—everyone    should get a fair share. But what if some guests are selfish? What if they change their minds, move seats to grab more, or prevent others from drinking? This simulation dives deep into the subtle dynamics of fairness, trust, and strategy in resource sharing.
+
+Using this model, you’ll see how cooperation can break down, how selfish behaviors impact fairness, and how implementing ban systems can restore balance. Through detailed simulations, data, and visual graphs.
+
+Whether you are interested in social dynamics, game theory, or just curious about fairness, this project offers a rich perspective on how rules, behavior, and enforcement shape collective outcomes. Explore how even simple rules can lead to complex and realistic social consequences.
+	
+
+Simulation of Water Sharing Among Guests: Behavior, Challenges, and Improvements
+
+Initial Assumptions and Scenario
+
+- Start with all guests as “good”: Everyone initially before pouring water.
+- behavioral changes: once pouring water some guests change from good to bad when they see there are only 2 cups.
+- Bad guest behaviors include:
+  - Drinking all water in the cup.
+  - Drinking more than the agreed share.
+  - Drinking their share but changing seats to drink more times.
+
+Possible Dynamics and Cases
+
+- Bad guests can switch back to good if influenced by others, and good guests can turn bad under bad influence.
+- Bad guests try to exploit the system; good guests aim to share fairly.
+- Guests change places only if they are bad; good guests stay put.
+- We suppose that cups can be divided among multiple guests realistically. (no info in requirement)
+- We suppose their is no dictator can monopolize all the water if guests are truly equal.
+- We suppose that guests usually don’t give away their water shares—they consume what they get.
+
+Challenges Identified
+
+- It’s difficult to ensure everyone drinks under all these dynamics.
+- The problem resembles social scenarios where a few selfish actors reduce overall fairness.
+- Seat changes and bad guests decrease the percentage of guests who get to drink.
+
+Simulation Program Overview
+
+- Guests start as good but may randomly change to bad or the opposite happens or stay the same.
+- Bad guests may drink all or exceed their expected parts or drink their expected parts of the cups and move seats randomly each turn.
+- This setup produces interesting data:
+  - For 14 guests, about 38.5% drink in 1000 simulations.
+  - For 7 guests, about 54.7% drink in 1000 simulations.
+- These percentages are lower than ideal and need improvement.
+
+Implemented Improvements
+
+- Assumed guests do not change seats in some scenarios.
+- Introduced a ban system: guests who drink all or exceed their expected share or drink in his second time are banned.
+- Banned guests no longer get to drink.
+- Guests mutually monitor and report cheaters, enforcing fairness.
+- Smart cheaters who try to cheat by drinking once and changing seats get detected in the second drink and banned immediately.
+- This system increased drinking percentages significantly:
+
+| Scenario                   | Percentage Drinking (14 guests)|
+|----------------------------|--------------------------------|
+| No ban, no seat changes    | 61.9%                          |
+| No ban, with seat changes  | 38.5%                          |
+| Ban, no seat changes       | 61.1%                          |
+| Ban, with seat changes     | 43.0%                          |
+
+| Scenario                   | Percentage Drinking (7 guests) |
+|----------------------------|--------------------------------|
+| No ban, no seat changes    | 66.3%                          |
+| No ban, with seat changes  | 54.7%                          |
+| Ban, no seat changes       | 67.2%                          |
+| Ban, with seat changes     | 58.8%                          |
+
+Reflections and Analogy to Society
+
+- The problem mirrors societal resource sharing, where “water” is like wealth or opportunities.
+- Selfish actors (“bad guests”) hoard resources, reducing fairness.
+- Ban systems resemble laws or accounting controls preventing exploiters from dominating.
+- A balanced ban system helps more people access resources fairly.
+
+In the graph_visualization folder, you'll find the results of 10 simulations with varying numbers of guests.
+In the program folder, you can find the program that I wrote.
+If you have any questions about my approach or implementation, please feel free to ask - I'll respond immediately.
+
+If you decide to reject this submission, I would greatly appreciate knowing the reasons why, so I can improve. If there's no comment section available or you can't find how to contact me, please use my email: younes.aamoum10@gmail.com
+
+Closing Thoughts
+
+I enjoyed working on this simulation overnight. It provides fascinating insights into social fairness and strategic behavior through a simple water-sharing problem. I look forward to improving the model further and welcome your feedback!
