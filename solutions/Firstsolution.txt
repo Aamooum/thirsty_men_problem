@@ -26,9 +26,10 @@ Possible Dynamics and Cases
 - Bad guests can switch back to good if influenced by others, and good guests can turn bad under bad influence.
 - Bad guests try to exploit the system; good guests aim to share fairly.
 - Guests change places only if they are bad; good guests stay put.
-- We suppose that cups can be divided among multiple guests realistically. (no info in requirement)
-- We suppose their is no dictator can monopolize all the water if guests are truly equal.
-- We suppose that guests usually don’t give away their water shares—they consume what they get.
+- We assume cups can be realistically divided among multiple guests, although this is not explicitly stated in the requirements.
+- We assume there is no dictator who can monopolize all the water and the guests are truly equal.
+- We assume that all guests agree to divide the water equally after pouring two cups.
+- We assume guests usually do not give away their shares; they consume whatever portion they receive.
 
 Challenges Identified
 
@@ -75,12 +76,20 @@ Reflections and Analogy to Society
 - Ban systems resemble laws or accounting controls preventing exploiters from dominating.
 - A balanced ban system helps more people access resources fairly.
 
-In the graph_visualization folder, you'll find the results of 10 simulations with varying numbers of guests.
+In the graph_visualization folder, you'll find the results of 1000 simulations with varying numbers of guests.
 In the program folder, you can find the program that I wrote.
 If you have any questions about my approach or implementation, please feel free to ask - I'll respond immediately.
-
-If you decide to reject this submission, I would greatly appreciate knowing the reasons why, so I can improve. If there's no comment section available or you can't find how to contact me, please use my email: younes.aamoum10@gmail.com
 
 Closing Thoughts
 
 I enjoyed working on this simulation overnight. It provides fascinating insights into social fairness and strategic behavior through a simple water-sharing problem. I look forward to improving the model further and welcome your feedback!
+
+
+Conclusion
+In ideal situations, where guests cooperate and share the cup fairly, and where there are always some good participants in the group, everyone can drink as intended. However, guest behavior can change based on what others do — some may become competitive or selfish, drinking more than their share or switching seats to drink again. This dynamic creates both a theoretical and practical challenge in maintaining fairness within the shared system.
+
+From the simulations, results show that introducing clear rules and social enforcement mechanisms greatly improves fairness. In this system, every guest plays a role in detecting cheaters. If someone drinks all the water or more than their share, others can immediately declare it. A future improvement could include fairness conditions where if a good guest notices another cheating but fails to report it, that observer is also penalized or banned. This addition would strengthen honesty and accountability within the simulation.
+
+For smaller groups (N ≤ 14), where all guests can see each other, this detection system becomes more effective. Good participants can communicate, identify bad behavior quickly, and prevent cheaters from manipulating the system (for instance, drinking their share, changing places, and drinking again). Under these conditions, banning selfish or disruptive guests significantly increases fairness and raises the percentage of participants who successfully get to drink.
+
+In conclusion, adding strict rules can increase the number of guests who get to drink water. However, since there is always a high probability that some guests will act selfishly and disrupt fairness, the percentage can improve but will never reach 100% — unless every guest remains good and never changes their mindset to become bad.
